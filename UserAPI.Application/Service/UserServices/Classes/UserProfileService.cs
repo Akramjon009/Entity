@@ -3,7 +3,7 @@ using Microsoft.EntityFrameworkCore.Metadata;
 using UserAPI.Application.Service.UserServices.Interfaces;
 using UserAPI.Domen.Entitys.UserModels.DTOs;
 using UserAPI.Domen.Model.UserModels.Models;
-using static UserAPI.Infostructure.Persistence.ApplicationDBCore;
+using UserAPI.Infostructure.Persistence;
 
 namespace UserAPI.Application.Service.UserServices.Classes
 {

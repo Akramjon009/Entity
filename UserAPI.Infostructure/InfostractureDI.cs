@@ -1,7 +1,7 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
-using static UserAPI.Infostructure.Persistence.ApplicationDBCore;
+using UserAPI.Infostructure.Persistence;
 
 namespace UserAPI.Infostructure
 {
