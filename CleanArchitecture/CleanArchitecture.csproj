@@ -20,4 +20,8 @@
     <Folder Include="wwwroot\" />
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\UserAPI.Infostructure\UserAPI.Infostructure.csproj" />
+  </ItemGroup>
+
 </Project>
