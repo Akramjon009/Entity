@@ -1,4 +1,4 @@
-﻿using EntityAPI.Domen.Entitys.Models;
+﻿using EntityAPI.Domen.Entitys.DTOs;
 using Microsoft.EntityFrameworkCore;
 
 namespace EntityAPI.Infostructure.Persistence
