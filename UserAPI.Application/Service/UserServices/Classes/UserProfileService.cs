@@ -1,33 +1,109 @@
-﻿using UserAPI.Application.Service.UserServices.Interfaces;
+﻿using Microsoft.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore.Metadata;
+using UserAPI.Application.Service.UserServices.Interfaces;
 using UserAPI.Domen.Entitys.UserModels.DTOs;
+using UserAPI.Domen.Model.UserModels.Models;
+using static UserAPI.Infostructure.Persistence.ApplicationDBCore;
 
 namespace UserAPI.Application.Service.UserServices.Classes
 {
     internal class UserProfileService : IUserProfileService
     {
-        public Task<Domen.Model.UserModels.Models.UserProfile> CreateUserProfileAsync(UserProfileDto User)
+        private readonly ApplicationDbContext _context;
+        public UserProfileService(ApplicationDbContext context)
         {
-            throw new NotImplementedException();
+            _context = context;
+        }
+        public async Task<string> CreateUserProfileAsync(UserProfileDto User)
+        {
+            try
+            {
+                var model = new UserProfile()
+                {
+                    FullName = User.FullName,
+                    UserRole = User.UserRole,
+                    age = User.age,
+                    email = User.email
+                };
+                await _context.UserProfiles.AddAsync(model);
+                await _context.SaveChangesAsync();
+                return "Qo'shildi";
+            }
+            catch
+            {
+                return "Qo'shilmadi Error mavjud";
+            }
         }
 
-        public Task<bool> DeleteUserProfileAsync(int id)
+        public async Task<bool> DeleteUserProfileAsync(int id)
         {
-            throw new NotImplementedException();
+            try
+            {
+                var model = await _context.UserProfiles.FirstOrDefaultAsync(x => x.Id == id);
+                if (model is not null)
+                {
+                    _context.UserProfiles.Remove(model);
+                    await _context.SaveChangesAsync();
+                    return true;
+                }
+                else
+                {
+                    return false;
+                }
+
+            }
+            catch
+            {
+                return false;
+            }
         }
 
-        public Task<Domen.Model.UserModels.Models.UserProfile> GetUserProfileAsync()
+        public async Task<IEnumerable<UserProfile>> GetUserProfileAsync()
         {
-            throw new NotImplementedException();
+            try
+            {
+                return await _context.UserProfiles.ToListAsync();
+            }
+            catch
+            {
+                return Enumerable.Empty<UserProfile>();
+            }
         }
 
-        public Task<Domen.Model.UserModels.Models.UserProfile> GetUserProfileAsync(int id)
+        public async Task<UserProfile> GetUserProfileByIdAsync(int id)
         {
-            throw new NotImplementedException();
+            try
+            {
+                var x = await _context.UserProfiles.FirstOrDefaultAsync(x => x.Id == id);
+                if (x is not null)
+                {
+                    return x;
+                }
+                return null;
+            }
+            catch
+            {
+                return null;
+            }
         }
 
-        public Task<bool> UpdateUserProfileAsync(int id, UserProfileDto User)
+        public async Task<bool> UpdateUserProfileAsync(int id, UserProfileDto User)
         {
-            throw new NotImplementedException();
+            try
+            {
+                var x = await _context.UserProfiles.FirstOrDefaultAsync(x => x.Id == id);
+                if (x != null)
+                {
+                    
+                    _context.SaveChanges();
+                    return true;
+                }
+                return false;
+            }
+            catch
+            {
+                return false;
+            }
         }
     }
 }

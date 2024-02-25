@@ -8,6 +8,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\UserAPI.Domen\UserAPI.Domen.csproj" />
+    <ProjectReference Include="..\UserAPI.Infostructure\UserAPI.Infostructure.csproj" />
   </ItemGroup>
 
 </Project>
