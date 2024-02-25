@@ -16,10 +16,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Controllers\" />
-  </ItemGroup>
-
-  <ItemGroup>
+    <ProjectReference Include="..\UserAPI.Application\UserAPI.Application.csproj" />
     <ProjectReference Include="..\UserAPI.Infostructure\UserAPI.Infostructure.csproj" />
   </ItemGroup>
 
