@@ -5,13 +5,13 @@ VisualStudioVersion = 17.8.34330.188
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "HomeWork", "HomeWork", "{BF18DF67-23C5-40B8-BD62-2F71CFE0B53A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CleanArchitecture", "CleanArchitecture\CleanArchitecture.csproj", "{B2771608-BE3B-475D-A1B1-4F515431E41F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CleanArchitecture", "CleanArchitecture\CleanArchitecture.csproj", "{B2771608-BE3B-475D-A1B1-4F515431E41F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UserAPI.Domen", "UserAPI.Domen\UserAPI.Domen.csproj", "{5B622C18-D6B9-4D56-AE33-D786E460A86B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "UserAPI.Domen", "UserAPI.Domen\UserAPI.Domen.csproj", "{5B622C18-D6B9-4D56-AE33-D786E460A86B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UserAPI.Application", "UserAPI.Application\UserAPI.Application.csproj", "{2AA4195F-88CF-4F11-BDE8-46048D5FE73E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "UserAPI.Application", "UserAPI.Application\UserAPI.Application.csproj", "{2AA4195F-88CF-4F11-BDE8-46048D5FE73E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UserAPI.Infostructure", "UserAPI.Infostructure\UserAPI.Infostructure.csproj", "{C0F9AE0E-5847-4DC9-8EF8-E98A66D72ACD}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "UserAPI.Infostructure", "UserAPI.Infostructure\UserAPI.Infostructure.csproj", "{C0F9AE0E-5847-4DC9-8EF8-E98A66D72ACD}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
